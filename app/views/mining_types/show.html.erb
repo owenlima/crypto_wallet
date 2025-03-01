@@ -1,10 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @mining_type %>
+<div class="container mt-4">
+    <%= render @mining_type %>
 
-<div>
-  <%= link_to "Edit this mining type", edit_mining_type_path(@mining_type) %> |
-  <%= link_to "Back to mining types", mining_types_path %>
+    <div class="mt-3">
+        <%= link_to "Edit this mining type", edit_mining_type_path(@mining_type), class: "btn btn-warning" %> |
+        <%= link_to "Back to mining types", mining_types_path, class: "btn btn-secondary" %>
+    </div>
 
-  <%= button_to "Destroy this mining type", @mining_type, method: :delete %>
+    <div class="mt-3">
+        <%= button_to "Destroy this mining type", @mining_type, method: :delete, class: "btn btn-danger" %>
+    </div>
 </div>

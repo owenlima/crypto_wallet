@@ -1,12 +1,13 @@
-<div id="<%= dom_id mining_type %>">
-  <p>
-    <strong>Description:</strong>
-    <%= mining_type.description %>
-  </p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Description:</th>
+      <th>Acronym:</th>
+    </tr>
+  </thead>
 
-  <p>
-    <strong>Acronym:</strong>
-    <%= mining_type.acronym %>
-  </p>
-
-</div>
+  <tbody>
+    <th><%= mining_type.description %></th>
+    <th><%= mining_type.acronym %></th>
+  </tbody>
+</table>

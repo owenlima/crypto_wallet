@@ -2,15 +2,25 @@
 
 <% content_for :title, "Mining types" %>
 
-<h1>Mining types</h1>
+<h1 class="text-center text-primary">Mining Types</h1>
 
-<div id="mining_types">
-  <% @mining_types.each do |mining_type| %>
-    <%= render mining_type %>
-    <p>
-      <%= link_to "Show this mining type", mining_type %>
-    </p>
-  <% end %>
+<div id="mining_types" class="container mt-4">
+  <div class="row">
+    <% @mining_types.each do |mining_type| %>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-3 mb-4 bg-white rounded">
+          <div class="card-body">
+            <%= render mining_type %>
+            <p>
+              <%= link_to "Show this mining type", mining_type, class: "btn btn-info" %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<%= link_to "New mining type", new_mining_type_path %>
+<p class="text-center mt-4">
+  <%= link_to "New mining type", new_mining_type_path, class: "btn btn-success" %>
+</p>

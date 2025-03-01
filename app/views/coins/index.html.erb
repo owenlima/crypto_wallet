@@ -2,15 +2,25 @@
 
 <% content_for :title, "Coins" %>
 
-<h1>Coins</h1>
+<h1 class="text-center text-primary">Coins</h1>
 
-<div id="coins">
-  <% @coins.each do |coin| %>
-    <%= render coin %>
-    <p>
-      <%= link_to "Show this coin", coin %>
-    </p>
-  <% end %>
+<div id="coins" class="container mt-4">
+  <div class="row">
+    <% @coins.each do |coin| %>
+      <div class="col-md-4">
+        <div class="card shadow-sm p-3 mb-4 bg-white rounded">
+          <div class="card-body">
+            <%= render coin %>
+            <p>
+              <%= link_to "Show this coin", coin, class: "btn btn-primary" %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-<%= link_to "New coin", new_coin_path %>
+<p class="text-center mt-4">
+  <%= link_to "New coin", new_coin_path, class: "btn btn-success" %>
+</p>
